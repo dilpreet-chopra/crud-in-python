@@ -1,0 +1,54 @@
+{% load static %}
+<html>
+	<head>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<!-- Popper JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+		</script>
+
+<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<style>
+			 .f2
+			 {
+				background-color: #353E44; 
+			 }
+			 .img
+			 {
+				padding-top: 0px;
+			 }
+			 .navbar a
+			 {
+
+				color:white;
+			 }
+
+			 .nav-link:hover
+			 {
+				color:#d7d7d7;
+			 }
+		</style>
+	</head>
+	<body>
+
+		<div class="row">
+			<div class="col-lg-2 f2">
+				<img src="{% static 'crudapp/askned.png' %}"  width="150px" class="img"/> 
+			</div>
+			<div class="col-lg-10 f2">
+				<nav class="navbar navbar-expand-lg">	
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'retrieve' %}">View Department</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</body>
+</html>

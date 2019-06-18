@@ -1,0 +1,52 @@
+{% extends "sidebar.html" %}
+		
+{% block content %}  
+ 
+<html>
+	<head>
+		<style>
+			.center{
+	   			text-align: center;
+				border: 3px solid #353E44;
+				margin-top: 30px;} 
+ 		</style>
+	</head>
+ 	<body>
+		<form action="{% url 'retrieve' %}" method="post" name="form2">
+			{% csrf_token %}
+			<br>
+			<h1 class="center"> Select Any Option </h1>
+			<div class="table-responsive">
+				<table class="table">
+					<tr>
+						<td>Select Department Id:</td>
+						<td>
+							
+  							
+    						<div class="form-group">
+  							<label for="sel1">Select Id:</label>
+  							<select class="form-control" name="deptid">
+  							{% for i in dynamicdata %}
+   							<option value="{{i.Id}}">{{i.Id}} {{i.Name}}</option>
+   							{% endfor %}
+    						</select>
+    						</div>
+						</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td> </td>
+						<td>
+							<button type="submit" name="submitid" value="DISPLAYDATA">Submit
+							</button>
+						</td>
+					</tr>
+			
+				</table>
+		</form>
+	</body>
+</html>
+{% endblock %}  
+
+
+
